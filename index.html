@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <?!= include('Styles'); ?>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+       <div class="logo">
+
+    <img src="https://ardsystem.sk/wp-content/uploads/2025/11/ard-logo-cervenobiele-05.svg" class="logoImg">
+
+    <span>Kalkulačný systém</span>
+
+</div>
+
+        <nav>
+
+            <button class="menu active" onclick="openPage('dashboard')">
+                🏠 Dashboard
+            </button>
+
+            <button class="menu" onclick="openPage('products')">
+                📦 Produkty
+            </button>
+
+            <button class="menu" onclick="openPage('materials')">
+                🧱 Materiály
+            </button>
+
+            <button class="menu" onclick="openPage('bom')">
+                📋 BOM
+            </button>
+
+            <button class="menu" onclick="openPage('pricing')">
+                🧮 Kalkulácie
+            </button>
+
+            <button class="menu" onclick="openPage('priceList')">
+                💰 Cenník
+            </button>
+
+            <button class="menu" onclick="openPage('offers')">
+                📑 Cenové ponuky
+            </button>
+
+            <button class="menu" onclick="openPage('settings')">
+                ⚙ Nastavenia
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <header>
+
+            <div>
+
+                <h1 id="pageTitle">
+                    Dashboard
+                </h1>
+
+                <p>
+                    Interný kalkulačný systém ARDSYSTEM
+                </p>
+
+            </div>
+
+            <div class="user">
+
+                Admin
+
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+
+        <section id="dashboard" class="page">
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <span>Produkty</span>
+
+                    <h2>0</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <span>Materiály</span>
+
+                    <h2>0</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <span>Čaká na schválenie</span>
+
+                    <h2>0</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <span>Priemerná marža</span>
+
+                    <h2>0 %</h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUKTY -->
+
+        <section id="products" class="page hidden">
+
+            <div class="panel">
+
+                <div class="panelHeader">
+
+                    <h2>Produkty</h2>
+
+                    <button class="primary">
+                        + Nový produkt
+                    </button>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>Kód</th>
+
+                        <th>Názov</th>
+
+                        <th>Kategória</th>
+
+                        <th>Predajná cena</th>
+
+                        <th>Stav</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td colspan="5" style="text-align:center;padding:50px;">
+
+                            Zatiaľ nie sú vytvorené žiadne produkty.
+
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- MATERIÁLY -->
+
+        <section id="materials" class="page hidden">
+
+            <div class="panel">
+
+                <div class="panelHeader">
+
+                    <h2>Materiály</h2>
+
+                    <button class="primary">
+                        + Nový materiál
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BOM -->
+
+        <section id="bom" class="page hidden">
+
+            <div class="panel">
+
+                <h2>BOM (Receptúry)</h2>
+
+            </div>
+
+        </section>
+
+        <!-- KALKULÁCIE -->
+
+        <section id="pricing" class="page hidden">
+
+            <div class="panel">
+
+                <h2>Kalkulácie</h2>
+
+            </div>
+
+        </section>
+
+        <!-- CENNÍK -->
+
+        <section id="priceList" class="page hidden">
+
+            <div class="panel">
+
+                <h2>Cenník</h2>
+
+            </div>
+
+        </section>
+
+        <!-- PONUKY -->
+
+        <section id="offers" class="page hidden">
+
+            <div class="panel">
+
+                <h2>Cenové ponuky</h2>
+
+            </div>
+
+        </section>
+
+        <!-- NASTAVENIA -->
+
+        <section id="settings" class="page hidden">
+
+            <div class="panel">
+
+                <h2>Nastavenia</h2>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<?!= include('Scripts'); ?>
+
+</body>
+</html>
