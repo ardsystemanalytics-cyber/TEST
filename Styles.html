@@ -1,0 +1,47 @@
+<script>
+
+const pages = [
+    "dashboard",
+    "products",
+    "materials",
+    "bom",
+    "pricing",
+    "priceList",
+    "offers",
+    "settings"
+];
+
+function openPage(page){
+
+    pages.forEach(function(id){
+
+        document.getElementById(id).classList.add("hidden");
+
+    });
+
+    document.getElementById(page).classList.remove("hidden");
+
+    document.querySelectorAll(".menu").forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    event.target.classList.add("active");
+
+    const titles = {
+
+        dashboard : "Dashboard",
+        products : "Produkty",
+        materials : "Materiály",
+        bom : "BOM (Receptúry)",
+        pricing : "Kalkulácie",
+        priceList : "Cenník",
+        offers : "Cenové ponuky",
+        settings : "Nastavenia"
+
+    };
+
+    document.getElementById("pageTitle").innerHTML = titles[page];
+
+}
+
+</script>
